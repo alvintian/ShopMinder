@@ -20,8 +20,8 @@
 		E1222F342B0E51DD00555964 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F322B0E51DD00555964 /* AuthViewModel.swift */; };
 		E1222F362B0E53AA00555964 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F352B0E53AA00555964 /* LoginView.swift */; };
 		E1222F372B0E53AA00555964 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F352B0E53AA00555964 /* LoginView.swift */; };
-		E1222F392B0E53EE00555964 /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F382B0E53EE00555964 /* AnonymousLoginView.swift */; };
-		E1222F3A2B0E53EE00555964 /* AnonymousLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F382B0E53EE00555964 /* AnonymousLoginView.swift */; };
+		E1222F3C2B0E6D6B00555964 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */; };
+		E1222F3D2B0E6D6B00555964 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */; };
 		E1CD31472B053BF6004C2D0E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31462B053BF6004C2D0E /* Tests_iOS.swift */; };
 		E1CD31492B053BF6004C2D0E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31482B053BF6004C2D0E /* Tests_iOSLaunchTests.swift */; };
 		E1CD31532B053BF6004C2D0E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31522B053BF6004C2D0E /* Tests_macOS.swift */; };
@@ -61,7 +61,7 @@
 		E1222F2C2B0D76A500555964 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		E1222F322B0E51DD00555964 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E1222F352B0E53AA00555964 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E1222F382B0E53EE00555964 /* AnonymousLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginView.swift; sourceTree = "<group>"; };
+		E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
 		E1CD312C2B053BF2004C2D0E /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		E1CD312D2B053BF2004C2D0E /* ShopMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMinderApp.swift; sourceTree = "<group>"; };
 		E1CD312E2B053BF2004C2D0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				E1222F2C2B0D76A500555964 /* FirebaseManager.swift */,
 				E1222F322B0E51DD00555964 /* AuthViewModel.swift */,
 				E1222F352B0E53AA00555964 /* LoginView.swift */,
-				E1222F382B0E53EE00555964 /* AnonymousLoginView.swift */,
+				E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -365,8 +365,8 @@
 			files = (
 				E1222F2A2B0D725000555964 /*  AuthenticationView.swift in Sources */,
 				E1222F2D2B0D76A500555964 /* FirebaseManager.swift in Sources */,
-				E1222F392B0E53EE00555964 /* AnonymousLoginView.swift in Sources */,
 				E1CD31582B053BF6004C2D0E /* ShopMinderApp.swift in Sources */,
+				E1222F3C2B0E6D6B00555964 /* ShoppingListView.swift in Sources */,
 				E1222F332B0E51DD00555964 /* AuthViewModel.swift in Sources */,
 				E1CD315C2B053BF6004C2D0E /* Persistence.swift in Sources */,
 				E1CD31562B053BF6004C2D0E /* ShopMinder.xcdatamodeld in Sources */,
@@ -381,8 +381,8 @@
 			files = (
 				E1222F2B2B0D725000555964 /*  AuthenticationView.swift in Sources */,
 				E1222F2E2B0D76A500555964 /* FirebaseManager.swift in Sources */,
-				E1222F3A2B0E53EE00555964 /* AnonymousLoginView.swift in Sources */,
 				E1CD31592B053BF6004C2D0E /* ShopMinderApp.swift in Sources */,
+				E1222F3D2B0E6D6B00555964 /* ShoppingListView.swift in Sources */,
 				E1222F342B0E51DD00555964 /* AuthViewModel.swift in Sources */,
 				E1CD315D2B053BF6004C2D0E /* Persistence.swift in Sources */,
 				E1CD31572B053BF6004C2D0E /* ShopMinder.xcdatamodeld in Sources */,
