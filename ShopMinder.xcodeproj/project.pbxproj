@@ -22,6 +22,7 @@
 		E1222F372B0E53AA00555964 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F352B0E53AA00555964 /* LoginView.swift */; };
 		E1222F3C2B0E6D6B00555964 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */; };
 		E1222F3D2B0E6D6B00555964 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */; };
+		E1222F3F2B1176C300555964 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1222F3E2B1176C300555964 /* FirebaseFirestore */; };
 		E1CD31472B053BF6004C2D0E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31462B053BF6004C2D0E /* Tests_iOS.swift */; };
 		E1CD31492B053BF6004C2D0E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31482B053BF6004C2D0E /* Tests_iOSLaunchTests.swift */; };
 		E1CD31532B053BF6004C2D0E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31522B053BF6004C2D0E /* Tests_macOS.swift */; };
@@ -84,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1222F242B0BD38F00555964 /* FirebaseAnalyticsSwift in Frameworks */,
+				E1222F3F2B1176C300555964 /* FirebaseFirestore in Frameworks */,
 				E1222F272B0CFBEF00555964 /* FirebaseAuth in Frameworks */,
 				E1222F222B0BD38F00555964 /* FirebaseAnalytics in Frameworks */,
 			);
@@ -215,6 +217,7 @@
 				E1222F212B0BD38F00555964 /* FirebaseAnalytics */,
 				E1222F232B0BD38F00555964 /* FirebaseAnalyticsSwift */,
 				E1222F262B0CFBEF00555964 /* FirebaseAuth */,
+				E1222F3E2B1176C300555964 /* FirebaseFirestore */,
 			);
 			productName = "ShopMinder (iOS)";
 			productReference = E1CD31352B053BF5004C2D0E /* ShopMinder.app */;
@@ -796,6 +799,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E1222F202B0BD38F00555964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		E1222F3E2B1176C300555964 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1222F202B0BD38F00555964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -11,7 +11,7 @@ struct ShoppingListView: View {
     @State private var newItem: String = ""
     @State private var shoppingItems: [String] = []
     @EnvironmentObject var authViewModel: AuthViewModel
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -32,8 +32,17 @@ struct ShoppingListView: View {
                     }
                 }
 
-                List(shoppingItems, id: \.self) { item in
-                    Text(item)
+                List {
+                    ForEach(shoppingItems, id: \.self) { item in
+                        HStack {
+                            Text(item)
+                            Spacer()
+                            Button(action: { self.deleteItem(item: item) }) {
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                    }
                 }
 
                 Button("Logout") {
@@ -41,12 +50,15 @@ struct ShoppingListView: View {
                 }
                 .padding()
                 .background(Color.red)
-  //              .foregroundColor(.white)
+                .foregroundColor(.white)
                 .cornerRadius(8)
 
                 Spacer()
             }
             .navigationBarTitle("Shopping List", displayMode: .inline)
+            .onAppear {
+                loadShoppingList()
+            }
         }
     }
 
@@ -55,7 +67,27 @@ struct ShoppingListView: View {
         if !trimmedItem.isEmpty {
             shoppingItems.append(trimmedItem)
             newItem = ""
+            saveShoppingList()
         }
+    }
+
+    private func deleteItem(item: String) {
+        if let index = shoppingItems.firstIndex(of: item) {
+            shoppingItems.remove(at: index)
+            saveShoppingList()
+        }
+    }
+
+    private func loadShoppingList() {
+        guard let user = authViewModel.currentUser else { return }
+        FirebaseManager.shared.fetchShoppingList(forUser: user) { items in
+            self.shoppingItems = items
+        }
+    }
+
+    private func saveShoppingList() {
+        guard let user = authViewModel.currentUser else { return }
+        FirebaseManager.shared.updateShoppingList(forUser: user, items: shoppingItems)
     }
 }
 
