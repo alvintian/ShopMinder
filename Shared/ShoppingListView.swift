@@ -11,6 +11,8 @@ import UIKit
 struct ShoppingListView: View {
     @State private var newItem: String = ""
     @State private var shoppingItems: [String] = []
+    @State private var showReminderPicker = false
+    @State private var reminderDate: Date = Date()
     @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
@@ -52,6 +54,13 @@ struct ShoppingListView: View {
                     }
                 }
 
+                Button("Set Reminder for Next Item") {
+                    showReminderPicker = true
+                }
+                .padding()
+                .background(Color.green)
+                .foregroundColor(.white)
+                .cornerRadius(8)
                 Button("Logout") {
                     authViewModel.logout()
                 }
@@ -66,8 +75,20 @@ struct ShoppingListView: View {
             .onAppear {
                 loadShoppingList()
             }
+            .sheet(isPresented: $showReminderPicker) {
+                DatePicker("Select Reminder Time", selection: $reminderDate, displayedComponents: .date)
+                Button("Set Reminder") {
+                    scheduleReminder()
+                    showReminderPicker = false
+                }
+            }
         }
     }
+    private func scheduleReminder() {
+        guard let nextItem = shoppingItems.first else { return }
+        NotificationManager.shared.scheduleNotification(title: "Reminder", body: "Remember to buy \(nextItem)", time: reminderDate)
+    }
+    
     private func shareShoppingList() {
         let listText = shoppingItems.joined(separator: "\n")
         let activityViewController = UIActivityViewController(activityItems: [listText], applicationActivities: nil)
@@ -79,7 +100,6 @@ struct ShoppingListView: View {
             popoverController.permittedArrowDirections = []
         }
 
-        // Present the share sheet
         UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
     

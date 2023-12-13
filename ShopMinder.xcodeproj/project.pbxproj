@@ -30,6 +30,9 @@
 		E1974DE92B2A1F6B0051A7AC /* Reminder_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E1974DE52B2A1F680051A7AC /* Reminder_widget.intentdefinition */; };
 		E1974DEA2B2A1F6B0051A7AC /* Reminder_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = E1974DE52B2A1F680051A7AC /* Reminder_widget.intentdefinition */; };
 		E1974DED2B2A1F6B0051A7AC /* Reminder_widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1974DDD2B2A1F680051A7AC /* Reminder_widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1974DF32B2A22D00051A7AC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1974DF22B2A22D00051A7AC /* NotificationManager.swift */; };
+		E1974DF42B2A22D00051A7AC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1974DF22B2A22D00051A7AC /* NotificationManager.swift */; };
+		E1974DF52B2A22D00051A7AC /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1974DF22B2A22D00051A7AC /* NotificationManager.swift */; };
 		E1CD31472B053BF6004C2D0E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31462B053BF6004C2D0E /* Tests_iOS.swift */; };
 		E1CD31492B053BF6004C2D0E /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31482B053BF6004C2D0E /* Tests_iOSLaunchTests.swift */; };
 		E1CD31532B053BF6004C2D0E /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CD31522B053BF6004C2D0E /* Tests_macOS.swift */; };
@@ -98,6 +101,7 @@
 		E1974DE52B2A1F680051A7AC /* Reminder_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Reminder_widget.intentdefinition; sourceTree = "<group>"; };
 		E1974DE62B2A1F6A0051A7AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1974DE82B2A1F6A0051A7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1974DF22B2A22D00051A7AC /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E1CD312C2B053BF2004C2D0E /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		E1CD312D2B053BF2004C2D0E /* ShopMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMinderApp.swift; sourceTree = "<group>"; };
 		E1CD312E2B053BF2004C2D0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				E1222F322B0E51DD00555964 /* AuthViewModel.swift */,
 				E1222F352B0E53AA00555964 /* LoginView.swift */,
 				E1222F3B2B0E6D6B00555964 /* ShoppingListView.swift */,
+				E1974DF22B2A22D00051A7AC /* NotificationManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1974DF52B2A22D00051A7AC /* NotificationManager.swift in Sources */,
 				E1974DE92B2A1F6B0051A7AC /* Reminder_widget.intentdefinition in Sources */,
 				E1974DE42B2A1F680051A7AC /* Reminder_widget.swift in Sources */,
 			);
@@ -469,6 +475,7 @@
 				E1222F2D2B0D76A500555964 /* FirebaseManager.swift in Sources */,
 				E1CD31582B053BF6004C2D0E /* ShopMinderApp.swift in Sources */,
 				E1222F3C2B0E6D6B00555964 /* ShoppingListView.swift in Sources */,
+				E1974DF32B2A22D00051A7AC /* NotificationManager.swift in Sources */,
 				E1974DEA2B2A1F6B0051A7AC /* Reminder_widget.intentdefinition in Sources */,
 				E1222F332B0E51DD00555964 /* AuthViewModel.swift in Sources */,
 				E1CD315C2B053BF6004C2D0E /* Persistence.swift in Sources */,
@@ -484,6 +491,7 @@
 			files = (
 				E1222F2B2B0D725000555964 /*  AuthenticationView.swift in Sources */,
 				E1222F2E2B0D76A500555964 /* FirebaseManager.swift in Sources */,
+				E1974DF42B2A22D00051A7AC /* NotificationManager.swift in Sources */,
 				E1CD31592B053BF6004C2D0E /* ShopMinderApp.swift in Sources */,
 				E1222F3D2B0E6D6B00555964 /* ShoppingListView.swift in Sources */,
 				E1222F342B0E51DD00555964 /* AuthViewModel.swift in Sources */,
