@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ShoppingListView: View {
     @State private var newItem: String = ""
@@ -18,7 +19,13 @@ struct ShoppingListView: View {
                 Text("Shopminder")
                     .font(.largeTitle)
                     .padding()
-
+                Button("Share List") {
+                    shareShoppingList()
+                }
+                .padding()
+                .background(Color.green)
+                .foregroundColor(.white)
+                .cornerRadius(8)
                 HStack {
                     TextField("Add new item", text: $newItem)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -61,7 +68,21 @@ struct ShoppingListView: View {
             }
         }
     }
+    private func shareShoppingList() {
+        let listText = shoppingItems.joined(separator: "\n")
+        let activityViewController = UIActivityViewController(activityItems: [listText], applicationActivities: nil)
 
+        // Required for iPad to set the popover presentation controller
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceView = UIApplication.shared.windows.first
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+
+        // Present the share sheet
+        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+    }
+    
     private func addItem() {
         let trimmedItem = newItem.trimmingCharacters(in: .whitespacesAndNewlines)
         if !trimmedItem.isEmpty {
