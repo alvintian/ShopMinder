@@ -17,10 +17,7 @@ struct ShoppingListView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Shopminder")
-                    .font(.largeTitle)
-                    .padding()
+            VStack(spacing: 10) {
                 Button("Share List") {
                     shareShoppingList()
                 }
